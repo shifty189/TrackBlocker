@@ -18,7 +18,7 @@ interval = 0.5
 args = sys.argv
 
 for index, a in enumerate(args):
-	if a == "-h":
+	if a == "-h" or a == "--help":
 		print("This program is intended to confuse wifi trackers. -d is required")
 		print("-d    Specify wifi card capible of packet injection")
 		print("-t    Specify how often probes should be sent. 0 for as fast as possible, leave empty for 0.5")
@@ -33,6 +33,7 @@ for index, a in enumerate(args):
 		interval = float(args[index + 1])
 
 if device == "nothing":
+	print(" ")
 	print("must specify an injection device with -d")
 	exit()
 
