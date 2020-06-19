@@ -19,6 +19,7 @@ args = sys.argv
 
 for index, a in enumerate(args):
 	if a == "-h" or a == "--help":
+		print(" ")
 		print("This program is intended to confuse wifi trackers. -d is required")
 		print("-d    Specify wifi card capible of packet injection")
 		print("-t    Specify how often probes should be sent. 0 for as fast as possible, leave empty for 0.5")
